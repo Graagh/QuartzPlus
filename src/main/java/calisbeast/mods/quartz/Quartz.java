@@ -39,6 +39,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Quartz {
 	
 	@Instance(value = References.MODID)
+	public static Quartz instance;
 	
 	private static Block block;
 	private QuartzConfig config;
