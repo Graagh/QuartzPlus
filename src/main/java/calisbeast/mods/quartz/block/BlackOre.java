@@ -53,7 +53,7 @@ public class BlackOre extends Block {
      * @return 
      */    
     public Item getItemDropped(int i, Random rand, int j) {
-    	return config.bool.get(0) ? Item.getItemById(498) : Item.getItemFromBlock(Quartz.black_quartz_ore);
+    	return config.bool.get(0) ? Quartz.black_quartz : Item.getItemFromBlock(Quartz.black_quartz_ore);
     }
     
     /*

@@ -52,7 +52,7 @@ public class PinkOre extends Block {
      * @return 
      */    
     public Item getItemDropped(int i, Random rand, int j) {
-    	return config.bool.get(0) ? Item.getItemById(499) : Item.getItemFromBlock(Quartz.pink_quartz_ore);
+    	return config.bool.get(0) ? Quartz.pink_quartz : Item.getItemFromBlock(Quartz.pink_quartz_ore);
     }
 
     /*
