@@ -77,17 +77,24 @@ public class Quartz {
 		QuartzConfig.loadConfig(new Configuration (event.getSuggestedConfigurationFile()));
 		
 		// Sets the previously empty block fields above, now the game knows what they are/do.
-		registerBlocks();
+		setBlocks();
 		
-		// Adds smoky and rose quartz items to the registry AND defines what they are.
-		Item.itemRegistry.addObject(498, "black_quartz", new Item().setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("black_quartz").setTextureName("quartz:black_quartz"));
-		Item.itemRegistry.addObject(499, "pink_quartz", new Item().setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("pink_quartz").setTextureName("quartz:pink_quartz"));
+		// Defines what rose and smoky quartz items are.
+		black_quartz = new Item().setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("black_quartz").setTextureName("quartz:black_quartz");
+		pink_quartz = new Item().setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("pink_quartz").setTextureName("quartz:pink_quartz");
+		
 		
 		// If tools are enabled in the config, add them to the game with crafting recipes.
 		if (config.bool.get(1)) {
+			setTools();
 			registerTools();
 			registerToolRecipes();
+			System.out.println("[INFO] Quartz Plus: Tools enabled.");
 		}
+		
+		//Adds the items to the registry now that they are defines
+		GameRegistry.registerItem(black_quartz,  black_quartz.getUnlocalizedName());
+		GameRegistry.registerItem(pink_quartz,  pink_quartz.getUnlocalizedName());
 		
 		// Adds the blocks to the registry now that they are defined.
 		GameRegistry.registerBlock(white_quartz_ore, "white_quartz_ore");
@@ -117,8 +124,8 @@ public class Quartz {
 	/*
 	 * Adds info to the blocks, tells the game what they are and what to do with them.
 	 */
-	public void registerBlocks() {
-		white_quartz_ore = new QuartzOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("white_quartz_ore_").setBlockTextureName("quartz:overworld_quartz_ore");
+	public void setBlocks() {
+		white_quartz_ore = new QuartzOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("white_quartz_ore").setBlockTextureName("quartz:overworld_quartz_ore");
 		black_quartz_ore = new BlackOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("black_quartz_ore").setBlockTextureName("quartz:black_quartz_ore");
 		pink_quartz_ore = new PinkOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("pink_quartz_ore").setBlockTextureName("quartz:pink_quartz_ore");
 		black_quartz_block = new BlackQuartz().setStepSound(Block.soundTypePiston).setBlockName("black_quartz_block").setBlockTextureName("quartz:black_quartz_block");
@@ -129,22 +136,36 @@ public class Quartz {
 	 * Adds recipes to the registry for all the quartz blocks and their variants - Still non-functional).
 	 */
 	public void registerRecipes() {
-		GameRegistry.addShapelessRecipe(new ItemStack(Quartz.black_quartz, 4), new ItemStack(Item.getItemFromBlock(Quartz.black_quartz_block)));
+		//Commented out because of non-functionality.
+		//GameRegistry.addShapelessRecipe(new ItemStack(Quartz.black_quartz, 4), new ItemStack(Item.getItemFromBlock(Quartz.black_quartz_block)));
 	}
 	
 	/*
-	 * Add the quartz tools to the registry and tells the console/log that tools are enabled.
+	 * Sets previously undefined tools. We'll add them to the registry later.
 	 */
-	public void registerTools() {
-		Item.itemRegistry.addObject(500, "quartz_shovel", new ItemSpade(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_shovel").setTextureName("quartz:quartz_shovel"));
-		Item.itemRegistry.addObject(501, "quartz_pickaxe", new QuartzPickaxe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_pickaxe").setTextureName("quartz:quartz_pickaxe"));
-		Item.itemRegistry.addObject(502, "quartz_sword", new ItemSword(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabCombat).setUnlocalizedName("quartz_sword").setTextureName("quartz:quartz_sword"));
-		Item.itemRegistry.addObject(503, "quartz_axe", new QuartzAxe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_axe").setTextureName("quartz:quartz_axe"));
-		Item.itemRegistry.addObject(504, "quartz_hoe", new ItemHoe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_hoe").setTextureName("quartz:quartz_hoe"));
-		System.out.println("[INFO] Quartz Plus: Tools enabled.");
+	public void setTools() {
+		quartz_shovel = new ItemSpade(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_shovel").setTextureName("quartz:quartz_shovel");
+		quartz_pickaxe = new QuartzPickaxe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_pickaxe").setTextureName("quartz:quartz_pickaxe");
+		quartz_sword = new ItemSword(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabCombat).setUnlocalizedName("quartz_sword").setTextureName("quartz:quartz_sword");
+		quartz_axe = new QuartzAxe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_axe").setTextureName("quartz:quartz_axe");
+		quartz_hoe = new ItemHoe(QuartzToolMaterial.QUARTZ).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("quartz_hoe").setTextureName("quartz:quartz_hoe");
 	}
 	
-	private void registerToolRecipes() {
+	/*
+	 * Adds the tools we just defined to the registry.
+	 */
+	public void registerTools() {
+		GameRegistry.registerItem(quartz_shovel,  quartz_shovel.getUnlocalizedName());
+		GameRegistry.registerItem(quartz_pickaxe,  quartz_pickaxe.getUnlocalizedName());
+		GameRegistry.registerItem(quartz_sword,  quartz_sword.getUnlocalizedName());
+		GameRegistry.registerItem(quartz_axe,  quartz_axe.getUnlocalizedName());
+		GameRegistry.registerItem(quartz_hoe,  quartz_hoe.getUnlocalizedName());
+	}
+	
+	/*
+	 * Sets the recipes for our tools so we can craft them.
+	 */
+	public void registerToolRecipes() {
 		
 		// Quartz used in crafting (just makes writing the recipes faster).
 		ItemStack quartzStack = new ItemStack(Items.quartz);
