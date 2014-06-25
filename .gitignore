@@ -1,0 +1,9 @@
+/bin/
+
+/eclipse/
+/eclipse/.metadata/
+/build/
+/.settings/
+/.gradle/
+/gradle/
+/src/main/resources/assets/
