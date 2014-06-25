@@ -6,6 +6,9 @@ package calisbeast.mods.quartz.references;
 
 public class References {
 	
+	/*
+	 * The field names should explain themselves, this is just for reference within other files.
+	 */
 	public static final String MODID = "QuartzPlus";
 	public static final String NAME = "Quartz Plus";
 	public static final String VERSION = "0.8";

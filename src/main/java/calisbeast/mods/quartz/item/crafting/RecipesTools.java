@@ -12,9 +12,15 @@ import calisbeast.mods.quartz.Quartz;
 
 public class RecipesTools {
 
+	/*
+	 * Crafting patterns for each tool.
+	 */
 	private String[][] recipePatterns = new String[][] {{"XXX", " # ", " # "}, {"X", "#", "#"}, {"XX", "X#", " #"}, {"XX", " #", " #"}};
     private Object[][] recipeItems;
 
+    /*
+     * Sets each object in the recipeItems field, each one goes with each recipe (in order).
+     */
     public RecipesTools()
     {
         this.recipeItems = new Object[][] {{Items.quartz}, {Quartz.quartz_pickaxe}, {Quartz.quartz_shovel}, {Quartz.quartz_axe}, {Quartz.quartz_hoe}};

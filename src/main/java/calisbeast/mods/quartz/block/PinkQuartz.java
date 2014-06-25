@@ -117,6 +117,9 @@ public class PinkQuartz extends Block {
         list.add(new ItemStack(item, 1, 2));
     }
 
+    /*
+     * Decides which icons (textures) to use on which faces (depends on metadata and the direction the block faces).
+     */
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister icon) {
         this.icon1 = new IIcon[sidetype.length];
@@ -135,8 +138,4 @@ public class PinkQuartz extends Block {
         this.icon3 = icon.registerIcon(this.getTextureName() + "_" + "pillar_top");
         this.icon5 = icon.registerIcon(this.getTextureName() + "_" + "bottom");
     }
-    
-    private static final String[] blockNames = {
-    		"Rose Quartz Block", "Chiseled Rose Quartz Block", "Rose Quartz Pillar"
-    };
 }

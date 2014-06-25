@@ -22,6 +22,9 @@ public class QuartzOre extends Block {
 	private static QuartzConfig config;
 	private Random random = new Random();
 
+	/*
+	 * Since this is for one specific block, we can set these variables right here.
+	 */
 	public QuartzOre(Material material) {
 		super(material);
 		setHardness(3.0F);
@@ -53,7 +56,10 @@ public class QuartzOre extends Block {
     public Item getItemDropped(int i, Random rand, int j) {
     	return config.bool.get(0) ? Items.quartz : Item.getItemFromBlock(Quartz.white_quartz_ore);
     }
-    
+
+    /*
+     * Returns the amount of XP to drop on destruction. This will drop anywhere from 2 to 5 XP points.
+     */
     @Override
     public int getExpDrop(IBlockAccess access, int i, int j) {
     	int j1;
