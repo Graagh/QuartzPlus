@@ -17,13 +17,13 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.2-0.8.4"
+version = "1.7.10-0.8.4"
 group= "calisbeast.mods.quartz"
 archivesBaseName = "QuartzPlus"
 
 minecraft {
-    version = "1.7.2-10.12.2.1133"
-    assetDir = "eclipse/assets"
+    version = "1.7.10-10.13.0.1178"
+    runDir = "eclipse/assets"
 }
 
 dependencies {
