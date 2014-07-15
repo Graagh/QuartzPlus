@@ -3,4 +3,6 @@
 /eclipse/
 /build/
 /gradle/
-/src/main/resources/assets/
+/src/main/resources/assets/quartz/textures
+gradlew
+gradlew.bat
