@@ -5,10 +5,10 @@
   "description": "Adds quartz ore to the overworld which is useful for when you don't have access to the Nether, and adds quartz tools and smoky and rose quartz variants.",
   "version": "0.8.4",
   "mcversion": "1.7.10",
-  "url": "",
+  "url": "http://minecraft.curseforge.com/mc-mods/72551-surface-quartz",
   "updateUrl": "",
-  "authors": ["Robosphinx"],
-  "credits": "",
+  "authorList": ["Robosphinx"],
+  "credits": "The modded Minecraft community, who inspired me to make QuartzPlus.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
