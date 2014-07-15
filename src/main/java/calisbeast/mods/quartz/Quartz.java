@@ -22,6 +22,8 @@ import calisbeast.mods.quartz.block.PinkOre;
 import calisbeast.mods.quartz.block.PinkQuartz;
 import calisbeast.mods.quartz.block.QuartzOre;
 import calisbeast.mods.quartz.block.QuartzSlab;
+import calisbeast.mods.quartz.block.QuartzSlabTest;
+import calisbeast.mods.quartz.block.QuartzStairs;
 import calisbeast.mods.quartz.item.QuartzAxe;
 import calisbeast.mods.quartz.item.QuartzPickaxe;
 import calisbeast.mods.quartz.item.QuartzToolMaterial;
@@ -67,8 +69,8 @@ public class Quartz {
 	public static Block black_quartz_block;
 	public static Block pink_quartz_block;
 	
-	public static Block quartz_slab;
-	public static Block double_quartz_slab;
+	public static Block black_quartz_slab;
+	public static Block double_black_quartz_slab;
 	public static Block black_quartz_stairs;
 	public static Block pink_quartz_stairs;
 	
@@ -108,11 +110,10 @@ public class Quartz {
 		GameRegistry.registerBlock(black_quartz_block, BlackItemBlock.class, "black_quartz_block");
 		GameRegistry.registerBlock(pink_quartz_block, PinkItemBlock.class, "pink_quartz_block");
 		
-		GameRegistry.registerBlock(quartz_slab, "quartz_slab");
-		GameRegistry.registerBlock(double_quartz_slab, "double_quartz_slab");
-		//GameRegistry.registerBlock(black_quartz_stairs, "black_quartz_stairs");
-		//GameRegistry.registerBlock(pink_quartz_slab, "pink_quartz_slab");
-		//GameRegistry.registerBlock(pink_quartz_stairs, "pink_quartz_stairs");
+		GameRegistry.registerBlock(black_quartz_slab, "black_quartz_slab");
+		//GameRegistry.registerBlock(double_black_quartz_slab, "double_black_quartz_slab");
+		GameRegistry.registerBlock(black_quartz_stairs, "black_quartz_stairs");
+		GameRegistry.registerBlock(pink_quartz_stairs, "pink_quartz_stairs");
 		
 		//Register World Gen
 		GameRegistry.registerWorldGenerator(new Generation(), 0);
@@ -136,14 +137,16 @@ public class Quartz {
 	 * Adds info to the blocks, tells the game what they are and what to do with them.
 	 */
 	public void setBlocks() {
-		white_quartz_ore = new QuartzOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("white_quartz_ore").setBlockTextureName("quartz:overworld_quartz_ore");
-		black_quartz_ore = new BlackOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("black_quartz_ore").setBlockTextureName("quartz:black_quartz_ore");
-		pink_quartz_ore = new PinkOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("pink_quartz_ore").setBlockTextureName("quartz:pink_quartz_ore");
-		black_quartz_block = new BlackQuartz().setStepSound(Block.soundTypePiston).setBlockName("black_quartz_block").setBlockTextureName("quartz:black_quartz_block");
-		pink_quartz_block = new PinkQuartz().setStepSound(Block.soundTypePiston).setBlockName("pink_quartz_block").setBlockTextureName("quartz:pink_quartz_block");
+		white_quartz_ore = new QuartzOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("oreQuartzPlus").setBlockTextureName("quartz:overworld_quartz_ore");
+		black_quartz_ore = new BlackOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("oreBlackQuartz").setBlockTextureName("quartz:black_quartz_ore");
+		pink_quartz_ore = new PinkOre(Material.rock).setHardness(4.0F).setResistance(5.0F).setBlockName("orePinkQuartz").setBlockTextureName("quartz:pink_quartz_ore");
+		black_quartz_block = new BlackQuartz().setStepSound(Block.soundTypePiston).setBlockName("blockBlackQuartz").setBlockTextureName("quartz:black_quartz_block");
+		pink_quartz_block = new PinkQuartz().setStepSound(Block.soundTypePiston).setBlockName("blockPinkQuartz").setBlockTextureName("quartz:pink_quartz_block");
 		
-		double_quartz_slab = new QuartzSlab(true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("quartzSlab");
-		quartz_slab = new QuartzSlab(false).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("quartzSlab");
+		double_black_quartz_slab = new QuartzSlab(true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("blackQuartzSlab");
+		black_quartz_slab = new QuartzSlab(false).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("blackQuartzSlab");
+		black_quartz_stairs = new QuartzStairs(black_quartz_block, 0).setBlockName("stairsBlackQuartz");
+		pink_quartz_stairs = new QuartzStairs(pink_quartz_block, 0).setBlockName("stairsPinkQuartz");
 	}
 	
 	/*

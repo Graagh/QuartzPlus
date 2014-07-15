@@ -1,0 +1,17 @@
+tile.white_quartz_ore.name=Quartz Ore
+tile.black_quartz_ore.name=Smoky Quartz Ore
+tile.pink_quartz_ore.name=Rose Quartz Ore
+tile.black_quartz_block.default.name=Block of Smoky Quartz
+tile.black_quartz_block.chiseled.name=Chiseled Smoky Quartz Block
+tile.black_quartz_block.pillar.name=Pillar Smoky Quartz Block
+tile.pink_quartz_block.default.name=Block of Rose Quartz
+tile.pink_quartz_block.chiseled.name=Chiseled Rose Quartz Block
+tile.pink_quartz_block.pillar.name=Pillar Rose Quartz Block
+item.black_quartz.name=Smoky Quartz
+item.pink_quartz.name=Rose Quartz
+item.quartz_sword.name=Quartz Sword
+item.quartz_shovel.name=Quartz Shovel
+item.quartz_pickaxe.name=Quartz Pickaxe
+item.quartz_axe.name=Quartz Axe
+item.quartz_hoe.name=Quartz Hoe
+item.netherquartz.name=Quartz
