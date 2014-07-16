@@ -23,8 +23,7 @@ public class QuartzOre extends Block {
     private Random               random = new Random();
     
     /*
-     * Since this is for one specific block, we can set these variables right
-     * here.
+     * Since this is for one specific block, we can set these variables right here.
      */
     public QuartzOre (Material material) {
         super(material);
@@ -35,8 +34,7 @@ public class QuartzOre extends Block {
     }
     
     /**
-     * Returns the usual quantity dropped by the block plus a bonus of 1 to 'i'
-     * (inclusive).
+     * Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive).
      */
     public int quantityDroppedWithBonus (int par1, Random par2Random) {
         return MathHelper.clamp_int(this.quantityDropped(par2Random) + par2Random.nextInt(par1 + 1), 1, 4);
@@ -59,8 +57,7 @@ public class QuartzOre extends Block {
     }
     
     /*
-     * Returns the amount of XP to drop on destruction. This will drop anywhere
-     * from 2 to 5 XP points.
+     * Returns the amount of XP to drop on destruction. This will drop anywhere from 2 to 5 XP points.
      */
     @Override
     public int getExpDrop (IBlockAccess access, int i, int j) {

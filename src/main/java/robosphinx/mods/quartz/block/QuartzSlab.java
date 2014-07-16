@@ -47,19 +47,15 @@ public class QuartzSlab extends BlockStoneSlab {
     }
     
     /*
-     * public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int
-     * p_149650_3_) { return Item.getItemFromBlock(Quartz.black_quartz_slab); }
+     * public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) { return Item.getItemFromBlock(Quartz.black_quartz_slab); }
      */
     
     /**
-     * Returns an item stack containing a single instance of the current block
-     * type. 'i' is the block's subtype/damage and is ignored for blocks which
-     * do not support subtypes. Blocks which cannot be harvested should return
-     * null.
+     * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which
+     * do not support subtypes. Blocks which cannot be harvested should return null.
      */
     /*
-     * protected ItemStack createStackedBlock(int p_149644_1_) { return new
-     * ItemStack(Item.getItemFromBlock(Quartz.black_quartz_slab), 2, p_149644_1_
+     * protected ItemStack createStackedBlock(int p_149644_1_) { return new ItemStack(Item.getItemFromBlock(Quartz.black_quartz_slab), 2, p_149644_1_
      * & 7); }
      */
     
@@ -68,14 +64,11 @@ public class QuartzSlab extends BlockStoneSlab {
     }
     
     /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood
-     * returns 4 blocks)
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
     /*
-     * @SideOnly(Side.CLIENT) public void getSubBlocks(Item p_149666_1_,
-     * CreativeTabs p_149666_2_, List p_149666_3_) { if (p_149666_1_ !=
-     * Item.getItemFromBlock(Quartz.double_black_quartz_slab)) { for (int i = 0;
-     * i <= 2; ++i) { if (i != 2) { p_149666_3_.add(new ItemStack(p_149666_1_,
-     * 1, i)); } } } }
+     * @SideOnly(Side.CLIENT) public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_) { if (p_149666_1_ !=
+     * Item.getItemFromBlock(Quartz.double_black_quartz_slab)) { for (int i = 0; i <= 2; ++i) { if (i != 2) { p_149666_3_.add(new
+     * ItemStack(p_149666_1_, 1, i)); } } } }
      */
 }
