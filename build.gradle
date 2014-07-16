@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-0.8.4"
+version = "1.7.10-0.9.0"
 group= "robosphinx.mods.quartz"
 archivesBaseName = "QuartzPlus"
 
 minecraft {
-    version = "1.7.10-10.13.0.1178"
+    version = "1.7.10-10.13.0.1180"
     runDir = "eclipse/assets"
 }
 
