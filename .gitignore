@@ -1,11 +1,9 @@
-.gradle
-/.gradle/
-.settings
-/.settings/
-/bin/
-/eclipse/
-/build/
-/gradle/
+/.gradle/*
+/.settings/*
+/bin/*
+/eclipse/*
+/build/*
+/gradle/*
 /src/main/resources/assets/quartz/textures
 .classpath
 .project
