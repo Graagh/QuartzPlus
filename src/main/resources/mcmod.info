@@ -2,13 +2,13 @@
 {
   "modid": "QuartzPlus",
   "name": "Quartz Plus",
-  "description": "Starting from the simple desire to have quartz on the overworld, Quartz Plus now adds all sorts of quartz-y goodness!",
-  "version": "1.7.10 - 0.9.0",
+  "description": "Starting from the simple desire to have quartz in the overworld, Quartz Plus now adds all sorts of quartz-y goodness!",
+  "version": "0.9.04",
   "mcversion": "1.7.10",
   "url": "http://minecraft.curseforge.com/mc-mods/72551-surface-quartz",
   "updateUrl": "",
   "authorList": ["Robosphinx"],
-  "credits": "The modded Minecraft community, who inspired me to make Quartz Plus.",
+  "credits": "Many people from the Minecraft community, who gave input on how to improve Quartz Plus.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
