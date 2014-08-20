@@ -2,6 +2,8 @@
 /.settings/*
 /bin/*
 /eclipse/*
+/eclipse/.metadata/.plugins/org.*
+/eclipse/.metadata/.plugins/*
 /build/*
 /src/main/resources/assets/quartz/textures
 /gradle/*
