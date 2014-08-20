@@ -1,10 +1,13 @@
 package robosphinx.mods.quartz.util;
 
+/**
+ * @author robosphinx
+ */
+
 import org.apache.logging.log4j.Level;
 
 import robosphinx.mods.quartz.reference.Reference;
 import cpw.mods.fml.common.FMLLog;
-
 
 public class LogHelper {
     

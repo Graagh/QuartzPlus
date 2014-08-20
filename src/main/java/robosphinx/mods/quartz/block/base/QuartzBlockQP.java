@@ -1,4 +1,4 @@
-package robosphinx.mods.quartz.block;
+package robosphinx.mods.quartz.block.base;
 
 /**
  * @author robosphinx
@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class RoseQuartz extends Block {
+public class QuartzBlockQP extends Block {
     
     public static final String[]  blocktype = new String[]{ "default", "chiseled", "pillar" };
     private static final String[] sidetype  = new String[]{ "side", "chiseled", "pillar", null, null };
@@ -32,11 +32,12 @@ public class RoseQuartz extends Block {
     private IIcon                 icon4;
     @SideOnly (Side.CLIENT)
     private IIcon                 icon5;
-    private static final String   __OBFID   = "CL_00000292";
     
-    public RoseQuartz () {
+    public QuartzBlockQP () {
         super(Material.rock);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        setCreativeTab(CreativeTabs.tabBlock);
+        setHardness(3.0F);
+        setResistance(5.0F);
     }
     
     /**
@@ -67,8 +68,7 @@ public class RoseQuartz extends Block {
     }
     
     /**
-     * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z,
-     * side, hitX, hitY, hitZ, block metadata
+     * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
      */
     public int onBlockPlaced (World world, int i, int j, int k, int l, float f1, float f2, float f3, int f4) {
         if (f4 == 2) {
@@ -91,18 +91,15 @@ public class RoseQuartz extends Block {
     }
     
     /**
-     * Determines the damage on the item the block drops. Used in cloth and
-     * wood.
+     * Determines the damage on the item the block drops. Used in cloth and wood.
      */
     public int damageDropped (int i) {
         return i != 3 && i != 4 ? i : 2;
     }
     
     /**
-     * Returns an item stack containing a single instance of the current block
-     * sidetype. 'i' is the block's subsidetype/damage and is ignored for blocks
-     * which do not support subsidetypes. Blocks which cannot be harvested
-     * should return null.
+     * Returns an item stack containing a single instance of the current block sidetype. 'i' is the block's subsidetype/damage and is ignored for
+     * blocks which do not support subsidetypes. Blocks which cannot be harvested should return null.
      */
     protected ItemStack createStackedBlock (int i) {
         return i != 3 && i != 4 ? super.createStackedBlock(i) : new ItemStack(Item.getItemFromBlock(this), 1, 2);
@@ -116,8 +113,7 @@ public class RoseQuartz extends Block {
     }
     
     /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood
-     * returns 4 blocks)
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
     @SideOnly (Side.CLIENT)
     public void getSubBlocks (Item item, CreativeTabs tab, List list) {
@@ -127,8 +123,7 @@ public class RoseQuartz extends Block {
     }
     
     /*
-     * Decides which icons (textures) to use on which faces (depends on metadata
-     * and the direction the block faces).
+     * Decides which icons (textures) to use on which faces (depends on metadata and the direction the block faces).
      */
     @SideOnly (Side.CLIENT)
     public void registerBlockIcons (IIconRegister icon) {

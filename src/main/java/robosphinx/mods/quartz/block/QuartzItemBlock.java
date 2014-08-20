@@ -8,7 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class RoseItemBlock extends ItemBlock {
+public class QuartzItemBlock extends ItemBlock {
     
     /*
      * What are our sub-block variants?
@@ -18,7 +18,7 @@ public class RoseItemBlock extends ItemBlock {
     /*
      * Tells the game that this block has sub-types.
      */
-    public RoseItemBlock (Block id) {
+    public QuartzItemBlock (Block id) {
         super(id);
         setHasSubtypes(true);
     }

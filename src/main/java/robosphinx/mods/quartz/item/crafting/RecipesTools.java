@@ -4,26 +4,27 @@ package robosphinx.mods.quartz.item.crafting;
  * @author robosphinx
  */
 
-import robosphinx.mods.quartz.Quartz;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import robosphinx.mods.quartz.init.QuartzPlusItems;
 
 public class RecipesTools {
+    
+    private QuartzPlusItems items;
     
     /*
      * Crafting patterns for each tool.
      */
-    private String[][] recipePatterns = new String[][]{ { "XXX", " # ", " # " }, { "X", "#", "#" }, { "XX", "X#", " #" }, { "XX", " #", " #" } };
-    private Object[][] recipeItems;
+    private String[][]      recipePatterns = new String[][]{ { "XXX", " # ", " # " }, { "X", "#", "#" }, { "XX", "X#", " #" }, { "XX", " #", " #" } };
+    private Object[][]      recipeItems;
     
     /*
-     * Sets each object in the recipeItems field, each one goes with each recipe
-     * (in order).
+     * Sets each object in the recipeItems field, each one goes with each recipe (in order).
      */
     public RecipesTools () {
-        this.recipeItems = new Object[][]{ { Items.quartz }, { Quartz.quartz_pickaxe }, { Quartz.quartz_shovel }, { Quartz.quartz_axe }, { Quartz.quartz_hoe } };
+        this.recipeItems = new Object[][]{ { Items.quartz }, { items.quartz_pickaxe }, { items.quartz_shovel }, { items.quartz_axe }, { items.quartz_hoe } };
     }
     
     /**

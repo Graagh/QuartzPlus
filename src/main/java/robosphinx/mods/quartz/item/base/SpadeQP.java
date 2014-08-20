@@ -5,11 +5,11 @@ package robosphinx.mods.quartz.item.base;
  */
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
 
-public class PickaxeQP extends ItemPickaxe {
+public class SpadeQP extends ItemSpade {
     
-    public PickaxeQP (ToolMaterial material) {
+    public SpadeQP (ToolMaterial material) {
         super(material);
         setMaxStackSize(1);
         setCreativeTab(CreativeTabs.tabTools);
