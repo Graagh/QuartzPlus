@@ -3,9 +3,10 @@
 /bin/*
 /eclipse/*
 /build/*
-/gradle/*
 /src/main/resources/assets/quartz/textures
+/gradle/*
 .classpath
 .project
 gradlew
 gradlew.bat
+/bin/
